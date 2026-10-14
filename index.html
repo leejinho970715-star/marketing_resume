@@ -123,6 +123,10 @@
     .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;color:var(--muted);font-size:14px}
     .footer-inner a{font-size:14px}
     .footer-inner a:hover{color:var(--accent)}
+    .hero-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:30px}
+    .hero-actions .hero-link{margin-top:0}
+    .pdf-download{display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:var(--paper);padding:11px 16px;border:1px solid var(--ink);border-radius:6px;font-size:14px;font-weight:600}
+    .pdf-download:hover{background:#3b3f36}
     @media(min-width:1440px){.wrap{max-width:1280px}.hero{gap:100px}.profile{max-width:400px;width:100%;justify-self:end}}
     @media(max-width:1000px){.wrap{padding:0 30px}.hero{gap:35px}.contributions{grid-template-columns:repeat(2,1fr)}.contribution{padding:25px}.card-icon{margin:17px 0}.contribution p{margin-bottom:17px}.capability{grid-template-columns:30px 195px 1fr;gap:18px}.intro-panel{grid-template-columns:155px 1fr}}
     @media(max-width:720px){.wrap{padding:0 23px}.header-inner{min-height:73px;gap:12px}nav{gap:15px;font-size:14px}.brand{font-size:14px;gap:8px}.brand small{font-size:14px}.brand-symbol{width:27px;height:27px;font-size:16px}.print-btn{padding:7px}.print-btn span{display:none}.print-btn .icon{width:17px;height:17px}.hero{grid-template-columns:1fr;gap:35px;padding:44px 0 38px}h1{font-size:43px;margin:21px 0}.hero-copy{font-size:14px}.profile{transform:none;max-width:460px;width:100%;padding:25px;justify-self:center}.profile-art{height:132px;margin:8px 0 14px}.art-ring{width:125px;height:125px}.asterisk{width:104px;height:104px}.profile h2{font-size:25px}.intro-panel{grid-template-columns:1fr;gap:19px;padding:28px 0 37px}.intro-text{font-size:14px}.section{padding:37px 0}.section-heading{display:block;margin-bottom:23px}.section-heading h2{font-size:26px}.section-heading p{margin-top:14px;max-width:none}.contributions{gap:10px}.contribution{padding:18px 16px}.contribution h3{font-size:14px}.contribution p{font-size:14px}.card-result{font-size:14px}.outcome{display:block;padding:22px}.outcome p{margin-top:10px;font-size:14px}.capability{grid-template-columns:26px 1fr;gap:10px 12px;padding:25px 0}.capability-title h3{font-size:17px}.capability-body{grid-column:2}.capability-title .english{font-size:14px}.capability-body p,.details{font-size:14px}.growth-badge{margin-top:9px}.closing{margin:0 0 20px;padding:20px 0;grid-template-columns:1fr}.closing h2{font-size:25px}.closing-mark{display:none}.footer-inner{font-size:14px;gap:12px}}
@@ -176,6 +180,11 @@
       .slogan{font-size:16px}.contributions{grid-template-columns:repeat(2,1fr)}.contribution h3,.capability-title h3{font-size:20px}
       .capability{grid-template-columns:26px 1fr;gap:12px}.capability-body{grid-column:2}.section-heading{display:block}.section-heading p{margin-top:12px;max-width:none}.outcome{display:block}
       .closing{grid-template-columns:1fr}.closing-mark{display:none}.closing h2{font-size:26px}
+      .hero-actions{display:none}
+      #impact,#capabilities{break-before:page}
+      .section-heading{break-inside:avoid;break-after:avoid}
+      .capability-title{break-after:avoid}
+      .footer-inner .print-btn{display:none}
     }
   </style>
 </head>
@@ -188,12 +197,13 @@
     <symbol id="image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 6-6 4 4 3-3 5 5"/></symbol>
     <symbol id="spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z M20 2v4 M18 4h4"/></symbol>
     <symbol id="printer" viewBox="0 0 24 24"><path d="M7 8V3h10v5 M7 17H4V8h16v9h-3 M7 14h10v7H7Z M17 11h.01"/></symbol>
+    <symbol id="download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
   </svg>
   <header>
     <div class="wrap header-inner">
       <a class="brand" href="#intro" aria-label="마케팅팀 업무 제안, 맨 위로"><span class="brand-symbol" aria-hidden="true">↗</span><span>DESIGN TO IMPACT<small>MARKETING ROLE PROPOSAL</small></span></a>
       <nav aria-label="주요 메뉴"><a href="#intro">소개</a><a href="#impact">기여 성과</a><a href="#capabilities">업무 역량</a></nav>
-      <button class="print-btn" type="button" onclick="window.print()" aria-label="인쇄 또는 PDF로 저장"><svg class="icon" aria-hidden="true"><use href="#printer"/></svg><span>인쇄 / PDF</span></button>
+      <a class="print-btn" href="assets/marketing_resume.pdf" download="marketing_resume(이은규).pdf" aria-label="PDF 다운로드" title="PDF 다운로드"><svg class="icon" aria-hidden="true"><use href="#download"/></svg><span>PDF 다운로드</span></a>
     </div>
   </header>
   <main id="main" class="wrap">
@@ -204,7 +214,7 @@
         <p class="hero-copy">디자인과 웹 제작 경험을 바탕으로,<br>콘텐츠 기획부터 웹사이트 개선, B2B 제안서까지.<br><strong>고객의 반응과 유입을 만드는 일에 기여하고자 합니다.</strong></p>
         <p class="slogan">디자인 역량을 마케팅에 접목해,<br><strong>팀의 다양한 업무를 함께 수행하는 사람</strong>으로 성장하겠습니다.</p>
         <div class="hero-tags" aria-label="핵심 역량"><span class="tag">콘텐츠 기획 · 디자인</span><span class="tag">UX/UI · 웹 제작</span><span class="tag">AI 활용 · 자동화</span></div>
-        <a class="hero-link" href="#capabilities">업무 역량 살펴보기<svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
+        <div class="hero-actions"><a class="hero-link" href="#capabilities">업무 역량 살펴보기<svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><a class="pdf-download" href="assets/marketing_resume.pdf" download="marketing_resume(이은규).pdf"><svg class="icon" aria-hidden="true"><use href="#download"/></svg>이력서 PDF 다운로드</a></div>
       </div>
       <aside class="profile" aria-label="역량 프로필">
         <div class="profile-top"><span>CAPABILITY PROFILE</span><span>DESIGN + TECH</span></div>
@@ -240,7 +250,7 @@
     </section>
     <section class="closing" aria-labelledby="closing-title"><div><div class="eyebrow"><span class="dot" aria-hidden="true"></span>DESIGN. BUILD. IMPROVE.</div><h2 id="closing-title">디자인을 바탕으로, 마케팅의 영역을 넓히겠습니다.</h2><p>디자인 경험에 웹 제작 역량과 AI 활용을 더해,<br>팀의 다양한 업무를 함께 수행하고 성과에 기여하는 사람으로 성장하겠습니다.</p></div><div class="closing-mark" aria-hidden="true">↗</div></section>
   </main>
-  <footer><div class="wrap footer-inner"><span>DESIGN TO IMPACT · 마케팅팀 업무 제안</span><a href="#intro">맨 위로 ↑</a></div></footer>
+  <footer><div class="wrap footer-inner"><span>DESIGN TO IMPACT · 마케팅팀 업무 제안</span><button class="print-btn" type="button" onclick="window.print()" aria-label="인쇄 또는 PDF로 저장"><svg class="icon" aria-hidden="true"><use href="#printer"/></svg><span>인쇄 / PDF 저장</span></button><a href="#intro">맨 위로 ↑</a></div></footer>
   <script>
     // 현재 보고 있는 영역을 메뉴에 표시합니다.
     if ('IntersectionObserver' in window) {
