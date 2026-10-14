@@ -127,6 +127,20 @@
     .hero-actions .hero-link{margin-top:0}
     .pdf-download{display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:var(--paper);padding:11px 16px;border:1px solid var(--ink);border-radius:6px;font-size:14px;font-weight:600}
     .pdf-download:hover{background:#3b3f36}
+    .internship-period{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .internship-period .period-label{display:block;width:100%;font-size:14px;color:var(--muted)}
+    .internship-period time{font-size:16px;color:var(--ink);font-weight:600;white-space:nowrap}
+    .work-groups{display:grid;grid-template-columns:1fr 1fr 1.35fr;gap:14px}
+    .work-group{border:1px solid var(--line);border-radius:12px;background:#fafaf7;padding:25px 23px}
+    .work-group-heading{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+    .work-group-heading .icon{color:var(--accent);width:24px;height:24px}
+    .work-group h3{font-size:20px;line-height:1.5;letter-spacing:-.04em;margin:0}
+    .work-group ul{padding-left:18px;margin:0;font-size:16px;line-height:1.85;color:var(--muted)}
+    .work-group li{padding-left:3px;margin-bottom:14px}
+    .work-group li:last-child{margin-bottom:0}
+    .work-group li::marker{color:var(--accent)}
+    .work-group small{display:block;font-size:14px;color:var(--muted);margin-top:3px}
+    @media(max-width:850px){.work-groups{grid-template-columns:1fr}.work-group{padding:24px}.internship-period{margin-top:16px}}
     @media(min-width:1440px){.wrap{max-width:1280px}.hero{gap:100px}.profile{max-width:400px;width:100%;justify-self:end}}
     @media(max-width:1000px){.wrap{padding:0 30px}.hero{gap:35px}.contributions{grid-template-columns:repeat(2,1fr)}.contribution{padding:25px}.card-icon{margin:17px 0}.contribution p{margin-bottom:17px}.capability{grid-template-columns:30px 195px 1fr;gap:18px}.intro-panel{grid-template-columns:155px 1fr}}
     @media(max-width:720px){.wrap{padding:0 23px}.header-inner{min-height:73px;gap:12px}nav{gap:15px;font-size:14px}.brand{font-size:14px;gap:8px}.brand small{font-size:14px}.brand-symbol{width:27px;height:27px;font-size:16px}.print-btn{padding:7px}.print-btn span{display:none}.print-btn .icon{width:17px;height:17px}.hero{grid-template-columns:1fr;gap:35px;padding:44px 0 38px}h1{font-size:43px;margin:21px 0}.hero-copy{font-size:14px}.profile{transform:none;max-width:460px;width:100%;padding:25px;justify-self:center}.profile-art{height:132px;margin:8px 0 14px}.art-ring{width:125px;height:125px}.asterisk{width:104px;height:104px}.profile h2{font-size:25px}.intro-panel{grid-template-columns:1fr;gap:19px;padding:28px 0 37px}.intro-text{font-size:14px}.section{padding:37px 0}.section-heading{display:block;margin-bottom:23px}.section-heading h2{font-size:26px}.section-heading p{margin-top:14px;max-width:none}.contributions{gap:10px}.contribution{padding:18px 16px}.contribution h3{font-size:14px}.contribution p{font-size:14px}.card-result{font-size:14px}.outcome{display:block;padding:22px}.outcome p{margin-top:10px;font-size:14px}.capability{grid-template-columns:26px 1fr;gap:10px 12px;padding:25px 0}.capability-title h3{font-size:17px}.capability-body{grid-column:2}.capability-title .english{font-size:14px}.capability-body p,.details{font-size:14px}.growth-badge{margin-top:9px}.closing{margin:0 0 20px;padding:20px 0;grid-template-columns:1fr}.closing h2{font-size:25px}.closing-mark{display:none}.footer-inner{font-size:14px;gap:12px}}
@@ -166,14 +180,14 @@
       html{scroll-padding-top:145px}
       .header-inner{flex-wrap:wrap;min-height:118px;gap:14px;padding-top:14px;padding-bottom:14px}
       .brand{font-size:14px;gap:9px}.brand small{font-size:14px;letter-spacing:.03em}
-      nav{order:3;width:100%;justify-content:center;gap:32px;font-size:14px}
+      nav{order:3;width:100%;justify-content:center;gap:20px;font-size:14px}
       .hero-copy,.intro-text,.contribution p,.outcome p,.capability-body p,.details,.closing p{font-size:16px}
       .hero{padding-top:38px}.profile{padding:24px}.profile-row{font-size:14px}
       .contributions{grid-template-columns:1fr}.contribution{padding:24px}.card-icon{margin:18px 0}.contribution h3{font-size:20px}.card-number,.card-result{font-size:14px}
       .capability-title h3{font-size:20px}.capability-title .english{font-size:14px}
       .closing h2{font-size:26px}.footer-inner{flex-wrap:wrap;font-size:14px}.footer-inner a{font-size:14px}
     }
-    @media(max-width:380px){.brand small{display:block}.profile{padding:20px}.profile-top{font-size:14px;letter-spacing:.04em}.profile-row{flex-wrap:wrap;gap:3px}.profile-row strong{width:100%;text-align:left}nav{gap:28px}}
+    @media(max-width:380px){.brand small{display:block}.profile{padding:20px}.profile-top{font-size:14px;letter-spacing:.04em}.profile-row{flex-wrap:wrap;gap:3px}.profile-row strong{width:100%;text-align:left}nav{gap:18px}}
     @media print{
       .header-inner{flex-wrap:nowrap;min-height:45px;padding:0}.hero{grid-template-columns:1.3fr 1fr;gap:22px}.profile{padding:18px}.profile-row{flex-wrap:wrap}.profile-row strong{width:100%;text-align:left}
       .hero-copy,.intro-text,.contribution p,.outcome p,.capability-body p,.details,.closing p,.section-heading p{font-size:16px}
@@ -181,7 +195,14 @@
       .capability{grid-template-columns:26px 1fr;gap:12px}.capability-body{grid-column:2}.section-heading{display:block}.section-heading p{margin-top:12px;max-width:none}.outcome{display:block}
       .closing{grid-template-columns:1fr}.closing-mark{display:none}.closing h2{font-size:26px}
       .hero-actions{display:none}
-      #impact,#capabilities{break-before:page}
+      #internship,#impact,#capabilities{break-before:page}
+      .work-groups{grid-template-columns:1fr;gap:14px}
+      .work-group{display:grid;grid-template-columns:170px 1fr;gap:18px;padding:22px;break-inside:avoid}
+      .work-group-heading{align-items:flex-start;gap:8px;margin:0}
+      .work-group-heading .icon{width:22px;height:22px;margin-top:4px}
+      .work-group h3{font-size:20px}
+      .work-group ul{font-size:16px}
+      .work-group li{margin-bottom:8px}
       .section-heading{break-inside:avoid;break-after:avoid}
       .capability-title{break-after:avoid}
       .footer-inner .print-btn{display:none}
@@ -202,8 +223,8 @@
   <header>
     <div class="wrap header-inner">
       <a class="brand" href="#intro" aria-label="마케팅팀 업무 제안, 맨 위로"><span class="brand-symbol" aria-hidden="true">↗</span><span>DESIGN TO IMPACT<small>MARKETING ROLE PROPOSAL</small></span></a>
-      <nav aria-label="주요 메뉴"><a href="#intro">소개</a><a href="#impact">기여 성과</a><a href="#capabilities">업무 역량</a></nav>
-      <a class="print-btn" href="assets/marketing_resume.pdf" download="marketing_resume(이은규).pdf" aria-label="PDF 다운로드" title="PDF 다운로드"><svg class="icon" aria-hidden="true"><use href="#download"/></svg><span>PDF 다운로드</span></a>
+      <nav aria-label="주요 메뉴"><a href="#intro">소개</a><a href="#internship">인턴 성과</a><a href="#impact">기여 성과</a><a href="#capabilities">업무 역량</a></nav>
+      <a class="print-btn" href="assets/marketing_resume.pdf?v=internship-20261014" download="marketing_resume(이은규).pdf" aria-label="PDF 다운로드" title="PDF 다운로드"><svg class="icon" aria-hidden="true"><use href="#download"/></svg><span>PDF 다운로드</span></a>
     </div>
   </header>
   <main id="main" class="wrap">
@@ -214,7 +235,7 @@
         <p class="hero-copy">디자인과 웹 제작 경험을 바탕으로,<br>콘텐츠 기획부터 웹사이트 개선, B2B 제안서까지.<br><strong>고객의 반응과 유입을 만드는 일에 기여하고자 합니다.</strong></p>
         <p class="slogan">디자인 역량을 마케팅에 접목해,<br><strong>팀의 다양한 업무를 함께 수행하는 사람</strong>으로 성장하겠습니다.</p>
         <div class="hero-tags" aria-label="핵심 역량"><span class="tag">콘텐츠 기획 · 디자인</span><span class="tag">UX/UI · 웹 제작</span><span class="tag">AI 활용 · 자동화</span></div>
-        <div class="hero-actions"><a class="hero-link" href="#capabilities">업무 역량 살펴보기<svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><a class="pdf-download" href="assets/marketing_resume.pdf" download="marketing_resume(이은규).pdf"><svg class="icon" aria-hidden="true"><use href="#download"/></svg>이력서 PDF 다운로드</a></div>
+        <div class="hero-actions"><a class="hero-link" href="#capabilities">업무 역량 살펴보기<svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><a class="pdf-download" href="assets/marketing_resume.pdf?v=internship-20261014" download="marketing_resume(이은규).pdf"><svg class="icon" aria-hidden="true"><use href="#download"/></svg>이력서 PDF 다운로드</a></div>
       </div>
       <aside class="profile" aria-label="역량 프로필">
         <div class="profile-top"><span>CAPABILITY PROFILE</span><span>DESIGN + TECH</span></div>
@@ -228,8 +249,16 @@
       <div class="section-label" id="background-title"><span>01 /</span> 경험과 방향</div>
       <div class="intro-text"><p>인턴 기간 동안 <strong>제안서와 회사소개서 디자인, 기업 홈페이지 UX/UI 리뉴얼, 웹사이트 제작, 배너 및 포스터 디자인</strong> 등 다양한 업무를 수행했습니다.</p><p>이러한 경험을 바탕으로 마케팅팀에서 디지털 마케팅 콘텐츠를 기획·제작하고, UX/UI 역량을 활용해 필요한 웹사이트를 제작·개선·관리하며, B2B 영업에 필요한 제안서 제작까지 담당하고자 합니다.</p></div>
     </section>
+    <section class="section" id="internship" aria-labelledby="internship-title">
+      <div class="section-heading"><div><div class="eyebrow">02 / INTERNSHIP OUTPUTS</div><h2 id="internship-title">그동안의 인턴 성과 결과물</h2></div><p class="internship-period"><span class="period-label">인턴 기간</span><time datetime="2026-08-24">2026.08.24</time><span aria-hidden="true">—</span><time datetime="2026-10-14">2026.10.14</time></p></div>
+      <div class="work-groups">
+        <article class="work-group"><div class="work-group-heading"><svg class="icon" aria-hidden="true"><use href="#image"/></svg><h3>콘텐츠 디자인</h3></div><ul><li>유튜브 채널 프로필 배너 이미지 제작</li><li>IFRS18 소개 포스터(A1) 제작</li><li>유튜브 숏츠 영상 2개 제작</li></ul></article>
+        <article class="work-group"><div class="work-group-heading"><svg class="icon" aria-hidden="true"><use href="#document"/></svg><h3>제안서 디자인</h3></div><ul><li>이음스퀘어 회사소개서 디자인</li><li>PMS 구축 제안서(건설) 디자인</li><li>PMS 구축 제안서(베이직) 디자인</li></ul></article>
+        <article class="work-group"><div class="work-group-heading"><svg class="icon" aria-hidden="true"><use href="#web"/></svg><h3>UX/UI 디자인 및<br>웹 개발</h3></div><ul><li>이음스퀘어 웹사이트 디자인 및 화면 개발<small>초반 로고 및 명함 포함</small></li><li>아이원디지털웨어 웹사이트 리뉴얼 디자인 및 화면 개발</li><li>AX/DX 레벨 진단 체크리스트 웹 개발</li><li>아이원소프트뱅크 웹사이트 리뉴얼 디자인 및 화면 개발</li><li>아이원비즈 웹사이트 디자인 수정</li><li>제안서 라이브러리 웹 개발</li></ul></article>
+      </div>
+    </section>
     <section class="section" id="impact" aria-labelledby="impact-title">
-      <div class="section-heading"><div><div class="eyebrow">02 / EXPECTED CONTRIBUTION</div><h2 id="impact-title">팀에서 만들고 싶은 성과</h2></div><p>기존에 수행한 업무 경험을 바탕으로,<br>마케팅팀의 실행력과 제작 효율을 높이겠습니다.</p></div>
+      <div class="section-heading"><div><div class="eyebrow">03 / EXPECTED CONTRIBUTION</div><h2 id="impact-title">팀에서 만들고 싶은 성과</h2></div><p>기존에 수행한 업무 경험을 바탕으로,<br>마케팅팀의 실행력과 제작 효율을 높이겠습니다.</p></div>
       <div class="contributions">
         <article class="contribution"><span class="card-number">01 — COMMUNICATION</span><div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#document"/></svg></div><h3>제안서 · 회사소개서<br>완성도 향상</h3><p>자료의 시각적 완성도를 높이고, 핵심 내용을 명확하게 전달하겠습니다.</p><div class="card-result"><span>↗</span>내용 전달력 향상</div></article>
         <article class="contribution"><span class="card-number">02 — WEB EXPERIENCE</span><div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#web"/></svg></div><h3>UX/UI 개선 및<br>웹사이트 제작</h3><p>필요한 웹페이지를 직접 디자인하고 개발해 외주 의존도를 줄이겠습니다.</p><div class="card-result"><span>↗</span>내부 제작 역량 강화</div></article>
@@ -239,7 +268,7 @@
       <div class="outcome"><div class="eyebrow">THE SHARED GOAL <span aria-hidden="true">↗</span></div><p>모든 업무의 목표는 <strong>고객 반응과 고객 유입의 향상</strong>입니다.<br>마케팅팀의 목표를 함께 이루어가겠습니다.</p></div>
     </section>
     <section class="section" id="capabilities" aria-labelledby="capabilities-title">
-      <div class="section-heading"><div><div class="eyebrow">03 / CAPABILITIES</div><h2 id="capabilities-title">제가 할 수 있는 업무</h2></div><p>지금 기여할 수 있는 역량과<br>앞으로 확장하고 싶은 업무를 정리했습니다.</p></div>
+      <div class="section-heading"><div><div class="eyebrow">04 / CAPABILITIES</div><h2 id="capabilities-title">제가 할 수 있는 업무</h2></div><p>지금 기여할 수 있는 역량과<br>앞으로 확장하고 싶은 업무를 정리했습니다.</p></div>
       <div class="capability-list">
         <article class="capability"><div class="capability-number">01</div><div class="capability-title"><h3>마케팅 콘텐츠<br>기획 및 제작</h3><span class="english">Content Planning &amp; Design</span></div><div class="capability-body"><ul class="details"><li>회사 제품과 서비스를 소개하는 <strong>카드뉴스, SNS 콘텐츠, 배너, 포스터, 썸네일</strong>을 기획하고 제작할 수 있습니다. 기존 디자인 경험을 바탕으로 메시지와 시각적 표현을 함께 설계합니다.</li><li>Grok이나 Adobe Firefly를 활용해 <strong>웹사이트 메인 비주얼과 짧은 콘텐츠 영상</strong>을 제작할 수 있습니다.</li><li>Higgsfield와 Codex의 MCP 연동을 활용한 영상 대량 생성 및 이어붙이기 등의 자동 편집 워크플로를 구성할 수 있습니다.</li></ul><div class="tools" aria-label="관련 도구 및 분야"><span class="tool">SNS · 카드뉴스</span><span class="tool">Grok</span><span class="tool">Adobe Firefly</span><span class="tool">Higgsfield</span><span class="tool">Codex · MCP</span></div></div></article>
         <article class="capability"><div class="capability-number">02</div><div class="capability-title"><h3>홈페이지 운영 및<br>웹 콘텐츠 관리</h3><span class="english">Website &amp; User Experience</span></div><div class="capability-body"><ul class="details"><li>자사 홈페이지 관리와 콘텐츠 업데이트, <strong>랜딩 페이지 및 신규 페이지 제작, UX/UI 개선, 모바일 반응형 최적화</strong>를 담당할 수 있습니다.</li><li>웹사이트 기획 과정에서 페이지 구성에 대한 <strong>와이어프레임과 프로토타입</strong>을 제작할 수 있습니다.</li><li>SEO·GEO를 고려해 HTML 메타태그와 시맨틱 HTML을 구성하고, 사이트맵 및 크롤러 접근 설정을 반영할 수 있습니다.</li></ul><div class="note">구현 항목 예시 · <code>og:title</code>, <code>og:description</code>, <code>og:image</code> 등 공유 메타데이터, 시맨틱 태그, <code>sitemap.xml</code>, <code>robots.txt</code>, <code>OAI-SearchBot</code> 접근 설정 및 사이트맵 제출</div><div class="tools" aria-label="관련 분야"><span class="tool">UX/UI</span><span class="tool">Wireframe · Prototype</span><span class="tool">Responsive Web</span><span class="tool">SEO · GEO</span><span class="tool">HTML</span></div></div></article>
