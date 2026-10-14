@@ -140,7 +140,9 @@
     .work-group li:last-child{margin-bottom:0}
     .work-group li::marker{color:var(--accent)}
     .work-group small{display:block;font-size:14px;color:var(--muted);margin-top:3px}
+    .work-group:last-child h3{white-space:nowrap}
     @media(max-width:850px){.work-groups{grid-template-columns:1fr}.work-group{padding:24px}.internship-period{margin-top:16px}}
+    @media(max-width:380px){.work-group:last-child h3{font-size:16px}}
     @media(min-width:1440px){.wrap{max-width:1280px}.hero{gap:100px}.profile{max-width:400px;width:100%;justify-self:end}}
     @media(max-width:1000px){.wrap{padding:0 30px}.hero{gap:35px}.contributions{grid-template-columns:repeat(2,1fr)}.contribution{padding:25px}.card-icon{margin:17px 0}.contribution p{margin-bottom:17px}.capability{grid-template-columns:30px 195px 1fr;gap:18px}.intro-panel{grid-template-columns:155px 1fr}}
     @media(max-width:720px){.wrap{padding:0 23px}.header-inner{min-height:73px;gap:12px}nav{gap:15px;font-size:14px}.brand{font-size:14px;gap:8px}.brand small{font-size:14px}.brand-symbol{width:27px;height:27px;font-size:16px}.print-btn{padding:7px}.print-btn span{display:none}.print-btn .icon{width:17px;height:17px}.hero{grid-template-columns:1fr;gap:35px;padding:44px 0 38px}h1{font-size:43px;margin:21px 0}.hero-copy{font-size:14px}.profile{transform:none;max-width:460px;width:100%;padding:25px;justify-self:center}.profile-art{height:132px;margin:8px 0 14px}.art-ring{width:125px;height:125px}.asterisk{width:104px;height:104px}.profile h2{font-size:25px}.intro-panel{grid-template-columns:1fr;gap:19px;padding:28px 0 37px}.intro-text{font-size:14px}.section{padding:37px 0}.section-heading{display:block;margin-bottom:23px}.section-heading h2{font-size:26px}.section-heading p{margin-top:14px;max-width:none}.contributions{gap:10px}.contribution{padding:18px 16px}.contribution h3{font-size:14px}.contribution p{font-size:14px}.card-result{font-size:14px}.outcome{display:block;padding:22px}.outcome p{margin-top:10px;font-size:14px}.capability{grid-template-columns:26px 1fr;gap:10px 12px;padding:25px 0}.capability-title h3{font-size:17px}.capability-body{grid-column:2}.capability-title .english{font-size:14px}.capability-body p,.details{font-size:14px}.growth-badge{margin-top:9px}.closing{margin:0 0 20px;padding:20px 0;grid-template-columns:1fr}.closing h2{font-size:25px}.closing-mark{display:none}.footer-inner{font-size:14px;gap:12px}}
@@ -203,6 +205,7 @@
       .work-group h3{font-size:20px}
       .work-group ul{font-size:16px}
       .work-group li{margin-bottom:8px}
+      .work-group:last-child{grid-template-columns:1fr}
       .section-heading{break-inside:avoid;break-after:avoid}
       .capability-title{break-after:avoid}
       .footer-inner .print-btn{display:none}
@@ -224,7 +227,7 @@
     <div class="wrap header-inner">
       <a class="brand" href="#intro" aria-label="마케팅팀 업무 제안, 맨 위로"><span class="brand-symbol" aria-hidden="true">↗</span><span>DESIGN TO IMPACT<small>MARKETING ROLE PROPOSAL</small></span></a>
       <nav aria-label="주요 메뉴"><a href="#intro">소개</a><a href="#internship">인턴 성과</a><a href="#impact">기여 성과</a><a href="#capabilities">업무 역량</a></nav>
-      <a class="print-btn" href="assets/marketing_resume.pdf?v=internship-20261014" download="marketing_resume(이은규).pdf" aria-label="PDF 다운로드" title="PDF 다운로드"><svg class="icon" aria-hidden="true"><use href="#download"/></svg><span>PDF 다운로드</span></a>
+      <a class="print-btn" href="assets/marketing_resume.pdf?v=internship-title-20261014" download="marketing_resume(이은규).pdf" aria-label="PDF 다운로드" title="PDF 다운로드"><svg class="icon" aria-hidden="true"><use href="#download"/></svg><span>PDF 다운로드</span></a>
     </div>
   </header>
   <main id="main" class="wrap">
@@ -235,7 +238,7 @@
         <p class="hero-copy">디자인과 웹 제작 경험을 바탕으로,<br>콘텐츠 기획부터 웹사이트 개선, B2B 제안서까지.<br><strong>고객의 반응과 유입을 만드는 일에 기여하고자 합니다.</strong></p>
         <p class="slogan">디자인 역량을 마케팅에 접목해,<br><strong>팀의 다양한 업무를 함께 수행하는 사람</strong>으로 성장하겠습니다.</p>
         <div class="hero-tags" aria-label="핵심 역량"><span class="tag">콘텐츠 기획 · 디자인</span><span class="tag">UX/UI · 웹 제작</span><span class="tag">AI 활용 · 자동화</span></div>
-        <div class="hero-actions"><a class="hero-link" href="#capabilities">업무 역량 살펴보기<svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><a class="pdf-download" href="assets/marketing_resume.pdf?v=internship-20261014" download="marketing_resume(이은규).pdf"><svg class="icon" aria-hidden="true"><use href="#download"/></svg>이력서 PDF 다운로드</a></div>
+        <div class="hero-actions"><a class="hero-link" href="#capabilities">업무 역량 살펴보기<svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><a class="pdf-download" href="assets/marketing_resume.pdf?v=internship-title-20261014" download="marketing_resume(이은규).pdf"><svg class="icon" aria-hidden="true"><use href="#download"/></svg>이력서 PDF 다운로드</a></div>
       </div>
       <aside class="profile" aria-label="역량 프로필">
         <div class="profile-top"><span>CAPABILITY PROFILE</span><span>DESIGN + TECH</span></div>
@@ -254,7 +257,7 @@
       <div class="work-groups">
         <article class="work-group"><div class="work-group-heading"><svg class="icon" aria-hidden="true"><use href="#image"/></svg><h3>콘텐츠 디자인</h3></div><ul><li>유튜브 채널 프로필 배너 이미지 제작</li><li>IFRS18 소개 포스터(A1) 제작</li><li>유튜브 숏츠 영상 2개 제작</li></ul></article>
         <article class="work-group"><div class="work-group-heading"><svg class="icon" aria-hidden="true"><use href="#document"/></svg><h3>제안서 디자인</h3></div><ul><li>이음스퀘어 회사소개서 디자인</li><li>PMS 구축 제안서(건설) 디자인</li><li>PMS 구축 제안서(베이직) 디자인</li></ul></article>
-        <article class="work-group"><div class="work-group-heading"><svg class="icon" aria-hidden="true"><use href="#web"/></svg><h3>UX/UI 디자인 및<br>웹 개발</h3></div><ul><li>이음스퀘어 웹사이트 디자인 및 화면 개발<small>초반 로고 및 명함 포함</small></li><li>아이원디지털웨어 웹사이트 리뉴얼 디자인 및 화면 개발</li><li>AX/DX 레벨 진단 체크리스트 웹 개발</li><li>아이원소프트뱅크 웹사이트 리뉴얼 디자인 및 화면 개발</li><li>아이원비즈 웹사이트 디자인 수정</li><li>제안서 라이브러리 웹 개발</li></ul></article>
+        <article class="work-group"><div class="work-group-heading"><svg class="icon" aria-hidden="true"><use href="#web"/></svg><h3>UX/UI 디자인 및 웹 개발</h3></div><ul><li>이음스퀘어 웹사이트 디자인 및 화면 개발<small>(초반 로고 및 명함 포함)</small></li><li>아이원디지털웨어 웹사이트 리뉴얼 디자인 및 화면 개발</li><li>AX/DX 레벨 진단 체크리스트 웹 개발</li><li>아이원소프트뱅크 웹사이트 리뉴얼 디자인 및 화면 개발</li><li>아이원비즈 웹사이트 디자인 수정</li><li>제안서 라이브러리 웹 개발</li></ul></article>
       </div>
     </section>
     <section class="section" id="impact" aria-labelledby="impact-title">
