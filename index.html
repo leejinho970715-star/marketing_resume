@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f3ee">
+  <meta name="description" content="디자인, 웹 제작, AI 활용 역량을 바탕으로 마케팅팀에 기여하기 위한 업무 제안 포트폴리오입니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="이은규 · 마케팅팀 업무 제안">
+  <meta property="og:title" content="marketing_resume(이은규)">
+  <meta property="og:description" content="디자인 역량을 마케팅에 접목해, 팀의 다양한 업무를 함께 수행하는 사람으로 성장하겠습니다.">
+  <meta property="og:url" content="https://leejinho970715-star.github.io/marketing_resume/">
+  <meta property="og:image" content="https://leejinho970715-star.github.io/marketing_resume/assets/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="디자인에서 마케팅의 성과로. 콘텐츠, UX/UI, AI 활용 역량을 담은 마케팅팀 업무 제안.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="marketing_resume(이은규)">
+  <meta name="twitter:description" content="디자인 역량을 마케팅에 접목해, 팀의 다양한 업무를 함께 수행하는 사람으로 성장하겠습니다.">
+  <meta name="twitter:image" content="https://leejinho970715-star.github.io/marketing_resume/assets/og-image.png">
+  <meta name="twitter:image:alt" content="marketing_resume(이은규)">
+  <link rel="canonical" href="https://leejinho970715-star.github.io/marketing_resume/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="assets/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180">
+  <link rel="preload" href="assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <title>marketing_resume(이은규)</title>
+  <style>
+    @font-face{font-family:"Pretendard";src:url("assets/fonts/PretendardVariable.woff2") format("woff2");font-style:normal;font-weight:45 920;font-display:swap}
+    :root{--paper:#f4f3ee;--white:#fff;--ink:#20221f;--muted:#63665e;--line:#d9dbd2;--accent:#de4c25;--tint:#ebece5;--radius:18px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:100px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Pretendard","Noto Sans KR","Malgun Gothic",sans-serif;word-break:keep-all;-webkit-font-smoothing:antialiased;line-height:1.75}
+    ::selection{background:#f4c4b2;color:var(--ink)}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+    .wrap{max-width:1200px;margin:auto;padding:0 48px}
+    .skip{position:fixed;top:-100px;left:20px;z-index:99;padding:10px 20px;background:var(--ink);color:white}
+    .skip:focus{top:10px}
+    header{position:sticky;top:0;z-index:20;background:rgba(244,243,238,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
+    .header-inner{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:800;letter-spacing:.03em;line-height:1.3}
+    .brand-symbol{width:33px;height:33px;display:grid;place-items:center;background:var(--ink);color:var(--paper);border-radius:50%;font-size:19px}
+    .brand small{display:block;color:var(--muted);font-size:14px;font-weight:500;letter-spacing:.16em;margin-top:5px}
+    nav{display:flex;align-items:center;gap:28px;font-size:14px;color:var(--muted)}
+    nav a{white-space:nowrap}
+    nav a:hover,nav a[aria-current="location"]{color:var(--accent)}
+    .print-btn{display:flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:6px;background:transparent;padding:8px 13px;color:var(--ink);cursor:pointer;font-size:14px}
+    .print-btn:hover{background:var(--tint)}
+    .icon{width:20px;height:20px;display:block;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:10px;line-height:1.5}
+    .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+    .hero{padding:76px 0 64px;display:grid;grid-template-columns:1.4fr 1fr;gap:64px;align-items:center}
+    h1{font-size:clamp(40px,4.4vw,58px);letter-spacing:-.065em;line-height:1.23;font-weight:800;margin:24px 0}
+    h1 span{color:var(--accent)}
+    .hero-copy{font-size:15px;line-height:1.9;max-width:530px;color:var(--muted);margin:0}
+    .hero-copy strong{color:var(--ink);font-weight:600}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px}
+    .tag{font-size:14px;border:1px solid var(--line);border-radius:100px;padding:5px 11px;color:var(--muted);background:transparent}
+    .hero-link{display:inline-flex;gap:18px;align-items:center;font-size:14px;font-weight:700;margin-top:32px;border-bottom:1px solid var(--ink);padding-bottom:7px}
+    .hero-link:hover{color:var(--accent);border-color:var(--accent)}
+    .profile{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:#e9ebe2;transform:rotate(1.5deg)}
+    .profile-top{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:700;letter-spacing:.12em}
+    .profile-top span:last-child{border:1px solid #b8bcae;border-radius:30px;padding:3px 9px;font-size:14px}
+    .profile-art{height:157px;display:flex;justify-content:center;align-items:center;position:relative;margin:12px 0 16px}
+    .art-ring{position:absolute;width:155px;height:155px;border:1px solid #b9beaf;border-radius:50%}
+    .art-ring:nth-child(2){transform:scale(.76)}
+    .asterisk{color:var(--accent);height:128px;width:128px;transform:rotate(-8deg)}
+    .profile h2{font-size:27px;line-height:1.25;letter-spacing:-.04em;margin:0 0 10px;font-weight:800}
+    .profile-subtitle{font-size:14px;color:var(--muted);margin:0 0 23px}
+    .profile-rows{border-top:1px solid #c6cbbe;padding-top:15px}
+    .profile-row{display:flex;justify-content:space-between;gap:10px;font-size:14px;margin:6px 0}
+    .profile-row span{color:var(--muted)}
+    .profile-row strong{font-weight:600}
+    .intro-panel{display:grid;grid-template-columns:190px 1fr;gap:38px;border-top:1px solid var(--line);padding:35px 0 55px}
+    .section-label{display:flex;gap:13px;align-items:center;font-size:14px;font-weight:700}
+    .section-label span{font-size:14px;color:var(--accent);font-family:"Pretendard",sans-serif}
+    .intro-text{font-size:14px;color:var(--muted)}
+    .intro-text p{margin:0 0 13px}
+    .intro-text p:last-child{margin:0}
+    .intro-text strong{color:var(--ink);font-weight:600}
+    .section{padding:58px 0;border-top:1px solid var(--line)}
+    .section-heading{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}
+    .section-heading h2{font-size:29px;line-height:1.35;letter-spacing:-.05em;margin:11px 0 0}
+    .section-heading p{font-size:14px;color:var(--muted);margin:0;max-width:330px}
+    .contributions{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .contribution{padding:24px 21px 22px;border:1px solid var(--line);border-radius:12px;background:#fafaf7;display:flex;flex-direction:column;align-items:flex-start}
+    .card-number{font-size:14px;letter-spacing:.08em;color:var(--muted);font-family:"Pretendard",sans-serif}
+    .card-icon{margin:24px 0 19px;color:var(--accent)}
+    .card-icon .icon{height:28px;width:28px;stroke-width:1.5}
+    .contribution h3{font-size:15px;line-height:1.5;letter-spacing:-.035em;margin:0 0 10px}
+    .contribution p{font-size:14px;line-height:1.8;color:var(--muted);margin:0 0 24px}
+    .card-result{margin-top:auto;border-top:1px solid var(--line);padding-top:14px;width:100%;font-size:14px;font-weight:600;display:flex;gap:7px;align-items:start}
+    .card-result span{color:var(--accent)}
+    .outcome{display:flex;align-items:center;gap:20px;background:var(--ink);color:var(--paper);padding:23px 27px;border-radius:12px;margin-top:14px}
+    .outcome .eyebrow{color:#c4c8b9;min-width:120px;font-size:14px}
+    .outcome p{font-size:14px;margin:0;line-height:1.8}
+    .outcome strong{font-weight:600;color:#f3b9a5}
+    .capability-list{border-top:1px solid var(--line)}
+    .capability{display:grid;grid-template-columns:49px 235px 1fr;gap:22px;padding:30px 0;border-bottom:1px solid var(--line)}
+    .capability-number{color:var(--accent);font-family:"Pretendard",sans-serif;font-size:14px;padding-top:2px}
+    .capability-title h3{font-size:17px;letter-spacing:-.04em;line-height:1.6;margin:0 0 9px}
+    .capability-title .english{display:block;font-family:"Pretendard",sans-serif;font-size:14px;letter-spacing:.08em;color:var(--muted);line-height:1.5;text-transform:uppercase}
+    .capability-body p{margin:0 0 12px;font-size:14px;line-height:1.9;color:var(--muted)}
+    .capability-body p:last-of-type{margin-bottom:0}
+    .capability-body strong{font-weight:600;color:var(--ink)}
+    .details{padding-left:17px;margin:0 0 16px;font-size:14px;color:var(--muted)}
+    .details li{padding-left:3px;margin-bottom:7px;line-height:1.9}
+    .details li::marker{color:#a6ab9a}
+    .tools{display:flex;flex-wrap:wrap;gap:6px;margin-top:17px}
+    .tool{font-family:"Pretendard",sans-serif;font-size:14px;line-height:1.5;padding:5px 9px;border-radius:4px;background:var(--tint);color:#565d4e}
+    .note{margin-top:15px;padding:12px 14px;background:#edece5;border-left:2px solid #b3b89f;font-size:14px;color:var(--muted);line-height:1.85}
+    code{font-family:"Pretendard",sans-serif;font-size:14px;overflow-wrap:anywhere;word-break:break-word}
+    .growth-badge{display:inline-block;color:var(--accent);font-size:14px;font-weight:600;line-height:1.5;border:1px solid #e5bbab;border-radius:30px;padding:4px 9px;margin-top:13px}
+    .closing{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;margin:8px 0 55px;padding:34px 0}
+    .closing h2{margin:13px 0 11px;font-size:28px;letter-spacing:-.05em;line-height:1.5}
+    .closing p{font-size:14px;line-height:1.9;margin:0;color:var(--muted)}
+    .closing-mark{color:var(--accent);font-size:72px;line-height:1;transform:rotate(-25deg);margin-right:20px}
+    footer{border-top:1px solid var(--line);padding:23px 0 32px}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;color:var(--muted);font-size:14px}
+    .footer-inner a{font-size:14px}
+    .footer-inner a:hover{color:var(--accent)}
+    @media(min-width:1440px){.wrap{max-width:1280px}.hero{gap:100px}.profile{max-width:400px;width:100%;justify-self:end}}
+    @media(max-width:1000px){.wrap{padding:0 30px}.hero{gap:35px}.contributions{grid-template-columns:repeat(2,1fr)}.contribution{padding:25px}.card-icon{margin:17px 0}.contribution p{margin-bottom:17px}.capability{grid-template-columns:30px 195px 1fr;gap:18px}.intro-panel{grid-template-columns:155px 1fr}}
+    @media(max-width:720px){.wrap{padding:0 23px}.header-inner{min-height:73px;gap:12px}nav{gap:15px;font-size:14px}.brand{font-size:14px;gap:8px}.brand small{font-size:14px}.brand-symbol{width:27px;height:27px;font-size:16px}.print-btn{padding:7px}.print-btn span{display:none}.print-btn .icon{width:17px;height:17px}.hero{grid-template-columns:1fr;gap:35px;padding:44px 0 38px}h1{font-size:43px;margin:21px 0}.hero-copy{font-size:14px}.profile{transform:none;max-width:460px;width:100%;padding:25px;justify-self:center}.profile-art{height:132px;margin:8px 0 14px}.art-ring{width:125px;height:125px}.asterisk{width:104px;height:104px}.profile h2{font-size:25px}.intro-panel{grid-template-columns:1fr;gap:19px;padding:28px 0 37px}.intro-text{font-size:14px}.section{padding:37px 0}.section-heading{display:block;margin-bottom:23px}.section-heading h2{font-size:26px}.section-heading p{margin-top:14px;max-width:none}.contributions{gap:10px}.contribution{padding:18px 16px}.contribution h3{font-size:14px}.contribution p{font-size:14px}.card-result{font-size:14px}.outcome{display:block;padding:22px}.outcome p{margin-top:10px;font-size:14px}.capability{grid-template-columns:26px 1fr;gap:10px 12px;padding:25px 0}.capability-title h3{font-size:17px}.capability-body{grid-column:2}.capability-title .english{font-size:14px}.capability-body p,.details{font-size:14px}.growth-badge{margin-top:9px}.closing{margin:0 0 20px;padding:20px 0;grid-template-columns:1fr}.closing h2{font-size:25px}.closing-mark{display:none}.footer-inner{font-size:14px;gap:12px}}
+    @media(max-width:380px){.wrap{padding:0 17px}nav{gap:10px}.brand small{display:none}h1{font-size:37px}.contributions{grid-template-columns:1fr}.contribution{padding:22px}.card-icon{margin:15px 0}.contribution p{font-size:14px}.card-result{font-size:14px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{
+      @page{size:A4;margin:15mm}
+      :root{--paper:#fff;--muted:#555;--line:#ccc}
+      body{font-size:16px;background:white;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+      .wrap{max-width:none;padding:0}header{position:static;background:white;backdrop-filter:none}.header-inner{min-height:45px}nav,.print-btn,.hero-link,.skip,.footer-inner a{display:none}
+      .hero{padding:28px 0;gap:30px;grid-template-columns:1.4fr 1fr}h1{font-size:35px}.hero-copy{font-size:14px}.profile{transform:none;padding:18px}.profile-art{height:95px}.art-ring{height:90px;width:90px}.asterisk{width:75px;height:75px}.profile h2{font-size:21px}.profile-subtitle{margin-bottom:12px}.hero-tags{margin-top:12px}.tag{font-size:14px;padding:3px 7px}
+      .intro-panel{padding:22px 0;grid-template-columns:130px 1fr;gap:20px}.intro-text{font-size:14px}.section{padding:25px 0}.section-heading{margin-bottom:18px}.section-heading h2{font-size:23px}.section-heading p{font-size:14px;max-width:270px}.contributions{grid-template-columns:repeat(2,1fr)}.contribution{padding:15px}.card-icon{margin:10px 0}.card-icon .icon{height:23px;width:23px}.contribution h3{font-size:14px}.contribution p{font-size:14px;margin-bottom:12px}.card-result{font-size:14px;padding-top:10px}.outcome{padding:15px 20px}.outcome p{font-size:14px}.outcome .eyebrow{min-width:100px}
+      .capability{grid-template-columns:25px 155px 1fr;gap:15px;padding:20px 0;break-inside:avoid}.capability-title h3{font-size:14px}.capability-body p,.details{font-size:14px}.tools{margin-top:10px}.tool{font-size:14px}.note{font-size:14px}.closing{padding:20px 0;margin:0}.closing h2{font-size:22px}.closing p{font-size:14px}.closing-mark{font-size:55px}.contribution,.outcome,.intro-panel,.profile,.closing{break-inside:avoid}footer{padding:15px 0}
+    }
+
+    /* 본문 16px, 보조 문구 최소 14px. 모바일에서도 같은 크기를 유지합니다. */
+    body{font-size:16px}
+    .hero-copy,.intro-text,.contribution p,.outcome p,.capability-body p,.details,.closing p{font-size:16px}
+    .contribution h3,.capability-title h3{font-size:20px}
+    .section-heading p{font-size:16px;max-width:380px}
+    .eyebrow,.card-number,.brand small{letter-spacing:.08em}
+    .profile-top{flex-wrap:wrap;gap:12px}
+    .profile-row{align-items:baseline;margin:10px 0}
+    .profile-row span{flex-shrink:0}
+    .profile-row strong{text-align:right}
+    .profile{padding:28px;transform:none}
+    .hero{gap:48px}
+    .slogan{font-size:16px;line-height:1.9;color:var(--muted);border-left:3px solid var(--accent);padding-left:16px;margin:24px 0 0;max-width:570px}
+    .slogan strong{color:var(--ink);font-weight:600}
+    .outcome .eyebrow{min-width:175px}
+    .capability{grid-template-columns:36px 250px 1fr;gap:22px}
+    .capability-title .english{letter-spacing:.03em}
+    .brand-symbol{flex-shrink:0}
+    @media(max-width:1100px){.contributions{grid-template-columns:repeat(2,1fr)}.hero{gap:30px;grid-template-columns:1.2fr 1fr}.capability{grid-template-columns:30px 210px 1fr;gap:18px}}
+    @media(max-width:850px){.hero{grid-template-columns:1fr}.profile{max-width:500px;width:100%;justify-self:center}.section-heading{display:block}.section-heading p{margin-top:14px;max-width:none}.outcome{display:block}.outcome p{margin-top:12px}.capability{grid-template-columns:26px 1fr;gap:12px}.capability-body{grid-column:2}}
+    @media(max-width:720px){
+      html{scroll-padding-top:145px}
+      .header-inner{flex-wrap:wrap;min-height:118px;gap:14px;padding-top:14px;padding-bottom:14px}
+      .brand{font-size:14px;gap:9px}.brand small{font-size:14px;letter-spacing:.03em}
+      nav{order:3;width:100%;justify-content:center;gap:32px;font-size:14px}
+      .hero-copy,.intro-text,.contribution p,.outcome p,.capability-body p,.details,.closing p{font-size:16px}
+      .hero{padding-top:38px}.profile{padding:24px}.profile-row{font-size:14px}
+      .contributions{grid-template-columns:1fr}.contribution{padding:24px}.card-icon{margin:18px 0}.contribution h3{font-size:20px}.card-number,.card-result{font-size:14px}
+      .capability-title h3{font-size:20px}.capability-title .english{font-size:14px}
+      .closing h2{font-size:26px}.footer-inner{flex-wrap:wrap;font-size:14px}.footer-inner a{font-size:14px}
+    }
+    @media(max-width:380px){.brand small{display:block}.profile{padding:20px}.profile-top{font-size:14px;letter-spacing:.04em}.profile-row{flex-wrap:wrap;gap:3px}.profile-row strong{width:100%;text-align:left}nav{gap:28px}}
+    @media print{
+      .header-inner{flex-wrap:nowrap;min-height:45px;padding:0}.hero{grid-template-columns:1.3fr 1fr;gap:22px}.profile{padding:18px}.profile-row{flex-wrap:wrap}.profile-row strong{width:100%;text-align:left}
+      .hero-copy,.intro-text,.contribution p,.outcome p,.capability-body p,.details,.closing p,.section-heading p{font-size:16px}
+      .slogan{font-size:16px}.contributions{grid-template-columns:repeat(2,1fr)}.contribution h3,.capability-title h3{font-size:20px}
+      .capability{grid-template-columns:26px 1fr;gap:12px}.capability-body{grid-column:2}.section-heading{display:block}.section-heading p{margin-top:12px;max-width:none}.outcome{display:block}
+      .closing{grid-template-columns:1fr}.closing-mark{display:none}.closing h2{font-size:26px}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 이동</a>
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="document" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8l-5-5Z M14 3v5h5 M8 12h8 M8 16h6"/></symbol>
+    <symbol id="web" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20 M6 6.5h.01 M9 6.5h.01 M10 12l-3 3 3 3 M14 12l3 3-3 3"/></symbol>
+    <symbol id="image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 6-6 4 4 3-3 5 5"/></symbol>
+    <symbol id="spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z M20 2v4 M18 4h4"/></symbol>
+    <symbol id="printer" viewBox="0 0 24 24"><path d="M7 8V3h10v5 M7 17H4V8h16v9h-3 M7 14h10v7H7Z M17 11h.01"/></symbol>
+  </svg>
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="#intro" aria-label="마케팅팀 업무 제안, 맨 위로"><span class="brand-symbol" aria-hidden="true">↗</span><span>DESIGN TO IMPACT<small>MARKETING ROLE PROPOSAL</small></span></a>
+      <nav aria-label="주요 메뉴"><a href="#intro">소개</a><a href="#impact">기여 성과</a><a href="#capabilities">업무 역량</a></nav>
+      <button class="print-btn" type="button" onclick="window.print()" aria-label="인쇄 또는 PDF로 저장"><svg class="icon" aria-hidden="true"><use href="#printer"/></svg><span>인쇄 / PDF</span></button>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" id="intro" aria-labelledby="hero-title">
+      <div>
+        <div class="eyebrow"><span class="dot" aria-hidden="true"></span>MARKETING TEAM · 업무 제안</div>
+        <h1 id="hero-title">디자인에서<br><span>마케팅의 성과로.</span></h1>
+        <p class="hero-copy">디자인과 웹 제작 경험을 바탕으로,<br>콘텐츠 기획부터 웹사이트 개선, B2B 제안서까지.<br><strong>고객의 반응과 유입을 만드는 일에 기여하고자 합니다.</strong></p>
+        <p class="slogan">디자인 역량을 마케팅에 접목해,<br><strong>팀의 다양한 업무를 함께 수행하는 사람</strong>으로 성장하겠습니다.</p>
+        <div class="hero-tags" aria-label="핵심 역량"><span class="tag">콘텐츠 기획 · 디자인</span><span class="tag">UX/UI · 웹 제작</span><span class="tag">AI 활용 · 자동화</span></div>
+        <a class="hero-link" href="#capabilities">업무 역량 살펴보기<svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
+      </div>
+      <aside class="profile" aria-label="역량 프로필">
+        <div class="profile-top"><span>CAPABILITY PROFILE</span><span>DESIGN + TECH</span></div>
+        <div class="profile-art" aria-hidden="true"><div class="art-ring"></div><div class="art-ring"></div><svg class="asterisk" viewBox="0 0 100 100"><g stroke="currentColor" stroke-width="15"><path d="M50 4v92 M4 50h92 M17.5 17.5l65 65 M17.5 82.5l65-65"/></g></svg></div>
+        <h2>Digital Marketing<br>&amp; Design</h2>
+        <p class="profile-subtitle">기획을 구체화하고, 직접 제작하는 실무 역량</p>
+        <div class="profile-rows"><div class="profile-row"><span>경험 기반</span><strong>디자인 · 웹사이트 제작</strong></div><div class="profile-row"><span>기여 분야</span><strong>콘텐츠 · 웹 · 영업자료</strong></div><div class="profile-row"><span>업무 방식</span><strong>AI 도구 활용 · 반복 업무 자동화</strong></div></div>
+      </aside>
+    </section>
+    <section class="intro-panel" aria-labelledby="background-title">
+      <div class="section-label" id="background-title"><span>01 /</span> 경험과 방향</div>
+      <div class="intro-text"><p>인턴 기간 동안 <strong>제안서와 회사소개서 디자인, 기업 홈페이지 UX/UI 리뉴얼, 웹사이트 제작, 배너 및 포스터 디자인</strong> 등 다양한 업무를 수행했습니다.</p><p>이러한 경험을 바탕으로 마케팅팀에서 디지털 마케팅 콘텐츠를 기획·제작하고, UX/UI 역량을 활용해 필요한 웹사이트를 제작·개선·관리하며, B2B 영업에 필요한 제안서 제작까지 담당하고자 합니다.</p></div>
+    </section>
+    <section class="section" id="impact" aria-labelledby="impact-title">
+      <div class="section-heading"><div><div class="eyebrow">02 / EXPECTED CONTRIBUTION</div><h2 id="impact-title">팀에서 만들고 싶은 성과</h2></div><p>기존에 수행한 업무 경험을 바탕으로,<br>마케팅팀의 실행력과 제작 효율을 높이겠습니다.</p></div>
+      <div class="contributions">
+        <article class="contribution"><span class="card-number">01 — COMMUNICATION</span><div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#document"/></svg></div><h3>제안서 · 회사소개서<br>완성도 향상</h3><p>자료의 시각적 완성도를 높이고, 핵심 내용을 명확하게 전달하겠습니다.</p><div class="card-result"><span>↗</span>내용 전달력 향상</div></article>
+        <article class="contribution"><span class="card-number">02 — WEB EXPERIENCE</span><div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#web"/></svg></div><h3>UX/UI 개선 및<br>웹사이트 제작</h3><p>필요한 웹페이지를 직접 디자인하고 개발해 외주 의존도를 줄이겠습니다.</p><div class="card-result"><span>↗</span>내부 제작 역량 강화</div></article>
+        <article class="contribution"><span class="card-number">03 — CREATIVE CONTENT</span><div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#image"/></svg></div><h3>마케팅 홍보<br>콘텐츠 제작</h3><p>배너, 포스터, 썸네일 등 채널과 목적에 맞는 다양한 콘텐츠를 제작하겠습니다.</p><div class="card-result"><span>↗</span>홍보 콘텐츠 실행력 강화</div></article>
+        <article class="contribution"><span class="card-number">04 — SMART WORKFLOW</span><div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#spark"/></svg></div><h3>AI 활용 및<br>업무 자동화</h3><p>분야별 AI 도구를 활용해 반복 업무를 자동화하고 제작 시간을 절감하겠습니다.</p><div class="card-result"><span>↗</span>제작 속도 · 업무 효율 향상</div></article>
+      </div>
+      <div class="outcome"><div class="eyebrow">THE SHARED GOAL <span aria-hidden="true">↗</span></div><p>모든 업무의 목표는 <strong>고객 반응과 고객 유입의 향상</strong>입니다.<br>마케팅팀의 목표를 함께 이루어가겠습니다.</p></div>
+    </section>
+    <section class="section" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="section-heading"><div><div class="eyebrow">03 / CAPABILITIES</div><h2 id="capabilities-title">제가 할 수 있는 업무</h2></div><p>지금 기여할 수 있는 역량과<br>앞으로 확장하고 싶은 업무를 정리했습니다.</p></div>
+      <div class="capability-list">
+        <article class="capability"><div class="capability-number">01</div><div class="capability-title"><h3>마케팅 콘텐츠<br>기획 및 제작</h3><span class="english">Content Planning &amp; Design</span></div><div class="capability-body"><ul class="details"><li>회사 제품과 서비스를 소개하는 <strong>카드뉴스, SNS 콘텐츠, 배너, 포스터, 썸네일</strong>을 기획하고 제작할 수 있습니다. 기존 디자인 경험을 바탕으로 메시지와 시각적 표현을 함께 설계합니다.</li><li>Grok이나 Adobe Firefly를 활용해 <strong>웹사이트 메인 비주얼과 짧은 콘텐츠 영상</strong>을 제작할 수 있습니다.</li><li>Higgsfield와 Codex의 MCP 연동을 활용한 영상 대량 생성 및 이어붙이기 등의 자동 편집 워크플로를 구성할 수 있습니다.</li></ul><div class="tools" aria-label="관련 도구 및 분야"><span class="tool">SNS · 카드뉴스</span><span class="tool">Grok</span><span class="tool">Adobe Firefly</span><span class="tool">Higgsfield</span><span class="tool">Codex · MCP</span></div></div></article>
+        <article class="capability"><div class="capability-number">02</div><div class="capability-title"><h3>홈페이지 운영 및<br>웹 콘텐츠 관리</h3><span class="english">Website &amp; User Experience</span></div><div class="capability-body"><ul class="details"><li>자사 홈페이지 관리와 콘텐츠 업데이트, <strong>랜딩 페이지 및 신규 페이지 제작, UX/UI 개선, 모바일 반응형 최적화</strong>를 담당할 수 있습니다.</li><li>웹사이트 기획 과정에서 페이지 구성에 대한 <strong>와이어프레임과 프로토타입</strong>을 제작할 수 있습니다.</li><li>SEO·GEO를 고려해 HTML 메타태그와 시맨틱 HTML을 구성하고, 사이트맵 및 크롤러 접근 설정을 반영할 수 있습니다.</li></ul><div class="note">구현 항목 예시 · <code>og:title</code>, <code>og:description</code>, <code>og:image</code> 등 공유 메타데이터, 시맨틱 태그, <code>sitemap.xml</code>, <code>robots.txt</code>, <code>OAI-SearchBot</code> 접근 설정 및 사이트맵 제출</div><div class="tools" aria-label="관련 분야"><span class="tool">UX/UI</span><span class="tool">Wireframe · Prototype</span><span class="tool">Responsive Web</span><span class="tool">SEO · GEO</span><span class="tool">HTML</span></div></div></article>
+        <article class="capability"><div class="capability-number">03</div><div class="capability-title"><h3>B2B 영업 및<br>제안서 제작 지원</h3><span class="english">Sales Enablement</span></div><div class="capability-body"><ul class="details"><li>고객에게 전달할 <strong>제안서, 회사소개서, 브랜드 홍보물</strong> 등 안내자료의 기획·편집·디자인을 수행할 수 있습니다.</li><li>Figma Slides로 제작한 자료를 <strong>PPTX, PDF 등 다양한 문서 형식</strong>으로 변환할 수 있습니다.</li><li>제안서와 소개자료를 <strong>‘제안서 라이브러리 웹’</strong>으로 모아 통합 관리하고, 필요한 자료를 쉽게 찾고 활용할 수 있도록 구성할 수 있습니다.</li></ul><div class="tools" aria-label="관련 도구 및 산출물"><span class="tool">Figma Slides</span><span class="tool">PPTX · PDF</span><span class="tool">제안서 라이브러리 웹</span></div></div></article>
+        <article class="capability"><div class="capability-number">04</div><div class="capability-title"><h3>블로그 · SNS 등<br>온라인 채널 운영 자동화</h3><span class="english">Channel &amp; Workflow Automation</span></div><div class="capability-body"><p>Codex와 Buffer 등 도구를 활용해 온라인 채널 운영의 반복 작업을 자동화할 수 있습니다. 인스타그램, X, 블로그 등 채널별 연동 범위에 맞춰 <strong>콘텐츠 초안 작성부터 게시 일정 관리까지</strong> 자동화 흐름을 구성합니다.</p><p>지정한 방향과 구성에 맞춘 이미지·글 작성, 게시 시간 설정, 발행 승인 과정을 연결하며, <strong>최종 검토와 승인은 사람이 담당</strong>하는 방식으로 운영합니다.</p><div class="tools" aria-label="관련 도구 및 분야"><span class="tool">Codex</span><span class="tool">Buffer</span><span class="tool">콘텐츠 초안 생성</span><span class="tool">게시 일정 · 승인 관리</span></div></div></article>
+        <article class="capability"><div class="capability-number">05</div><div class="capability-title"><h3>디지털 마케팅<br>운영 지원</h3><span class="english">Performance &amp; Optimization</span><span class="growth-badge">앞으로 확장하고 싶은 업무</span></div><div class="capability-body"><p>아직 직접 수행한 경험은 없지만, 앞으로 도전하고 싶은 분야입니다. <strong>A/B 테스트를 통해 콘텐츠와 페이지의 반응을 비교</strong>하고, 방문자 수와 콘텐츠 성과를 정리하는 업무를 수행하고자 합니다.</p><p>축적된 데이터를 분석해 <strong>향후 콘텐츠 기획과 웹사이트 개선 방향에 반영</strong>하며, 제작 역량을 성과 분석 역량으로 확장하고 싶습니다.</p><div class="tools" aria-label="성장 목표"><span class="tool">A/B Test</span><span class="tool">방문자 · 반응 분석</span><span class="tool">개선 방향 도출</span></div></div></article>
+      </div>
+    </section>
+    <section class="closing" aria-labelledby="closing-title"><div><div class="eyebrow"><span class="dot" aria-hidden="true"></span>DESIGN. BUILD. IMPROVE.</div><h2 id="closing-title">디자인을 바탕으로, 마케팅의 영역을 넓히겠습니다.</h2><p>디자인 경험에 웹 제작 역량과 AI 활용을 더해,<br>팀의 다양한 업무를 함께 수행하고 성과에 기여하는 사람으로 성장하겠습니다.</p></div><div class="closing-mark" aria-hidden="true">↗</div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><span>DESIGN TO IMPACT · 마케팅팀 업무 제안</span><a href="#intro">맨 위로 ↑</a></div></footer>
+  <script>
+    // 현재 보고 있는 영역을 메뉴에 표시합니다.
+    if ('IntersectionObserver' in window) {
+      const links = [...document.querySelectorAll('nav a')];
+      const sections = links.map(link => document.querySelector(link.getAttribute('href')));
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(link => {
+              if (link.getAttribute('href') === '#' + entry.target.id) link.setAttribute('aria-current', 'location');
+              else link.removeAttribute('aria-current');
+            });
+          }
+        });
+      }, { rootMargin: '-15% 0px -60% 0px', threshold: 0 });
+      sections.forEach(section => observer.observe(section));
+    }
+  </script>
+</body>
+</html>
