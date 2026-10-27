@@ -44,6 +44,10 @@ strong{font-weight:650;color:var(--ink)}
 dt{color:var(--muted)}
 dd{margin:0;font-weight:600;line-height:1.7}
 .profile-note{font-size:14px;line-height:1.7;color:var(--muted);border-top:1px solid #c8d2c1;padding-top:16px;margin:18px 0 0}
+.profile-tools{min-width:0}
+.ai-tool-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.ai-tool{display:inline-flex;align-items:center;gap:6px;max-width:100%;padding:4px 7px;border:1px solid #ccd7c5;border-radius:5px;background:#f8faf5;font-size:14px;font-weight:550;line-height:1.5;white-space:nowrap}
+.ai-tool img{display:block;width:20px;height:20px;object-fit:contain;flex-shrink:0}
 .section{padding:49px 0;border-top:1px solid var(--line)}
 .section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:23px}
 .section-heading h2{font-size:28px;line-height:1.5;letter-spacing:-.045em;margin:9px 0 0;font-weight:750}
@@ -86,6 +90,16 @@ h3{font-size:20px;line-height:1.5;letter-spacing:-.035em;font-weight:700}
 .contribution-grid h3{margin:8px 0 12px;font-size:20px}
 .contribution-grid p{font-size:16px;line-height:1.85;color:var(--muted);margin:0}
 .growth-note{padding:19px 22px;border-left:3px solid var(--accent);background:var(--tint);font-size:14px;line-height:1.9;color:var(--muted);margin:25px 0 0}
+.measurement-plan{margin-top:30px;padding-top:25px;border-top:1px solid var(--line)}
+.measurement-plan>h3{font-size:22px;line-height:1.5;margin:8px 0 12px}
+.measurement-intro{font-size:16px;line-height:1.85;color:var(--muted);margin:0 0 22px;max-width:900px}
+.measurement-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.measurement-grid article{padding:19px;border:1px solid var(--line);border-radius:10px;background:var(--white)}
+.measurement-grid h4{font-size:18px;line-height:1.5;margin:0 0 12px;font-weight:650;letter-spacing:-.025em}
+.measurement-grid p{font-size:16px;line-height:1.8;margin:0;color:var(--muted)}
+.measurement-grid .metric-examples{font-size:14px;line-height:1.8;margin-top:15px;padding-top:12px;border-top:1px solid var(--line)}
+.metric-examples strong{display:block;color:var(--accent);font-size:14px;font-weight:650;margin-bottom:4px}
+@media(max-width:850px){.measurement-grid{grid-template-columns:1fr;gap:12px}}
 .closing{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:39px 0 7px}
 .closing p{margin:0;font-size:25px;line-height:1.6;letter-spacing:-.035em;color:var(--muted)}
 .closing>span{color:var(--accent);font-size:58px;line-height:1}
@@ -128,6 +142,10 @@ footer{border-top:1px solid var(--line);padding:25px 0 30px}
   .profile{padding:14px}.profile-top{display:none}.profile-name{font-size:34px;margin:0 0 4px}.profile-position{margin-bottom:10px}.profile-details{padding-top:8px}.profile-details>div{margin:6px 0}.profile-note{padding-top:8px;margin-top:10px;line-height:1.5}
   .pm-grid{gap:8px}.pm-card{padding:12px}.pm-card>.icon{display:none}.pm-card p{line-height:1.65;margin-bottom:10px}.small-tag{padding-top:9px}
   #contribution{break-before:page}
+  .profile-details .tools-detail{grid-template-columns:1fr;gap:6px}
+  .ai-tool-list{gap:4px;margin-top:5px}.ai-tool{padding:1px 3px;gap:4px;line-height:1.4}.ai-tool img{width:16px;height:16px}
+  .measurement-plan{margin-top:22px;padding-top:18px;break-inside:avoid}.measurement-plan>h3{font-size:20px;margin:7px 0 10px}.measurement-intro{font-size:16px;line-height:1.7;margin-bottom:16px}
+  .measurement-grid{grid-template-columns:repeat(3,1fr);gap:12px}.measurement-grid article{padding:14px;break-inside:avoid}.measurement-grid h4{font-size:18px;margin-bottom:10px}.measurement-grid p{font-size:16px;line-height:1.7}.measurement-grid .metric-examples{font-size:14px;margin-top:12px;padding-top:10px}
 }
 
     .career-list{border-top:1px solid var(--line)}
@@ -141,3 +159,7 @@ footer{border-top:1px solid var(--line);padding:25px 0 30px}
     .certificate-item h3{font-size:20px;line-height:1.5;letter-spacing:-.03em;margin:0;font-weight:700}
     @media(max-width:600px){.certificate-list{grid-template-columns:1fr}.career-item{padding:19px 0}.career-item h3,.certificate-item h3{font-size:18px}.certificate-item{padding:20px}}
     @media print{#career{break-before:page}.career-item,.certificate-item{break-inside:avoid}.certificate-list{grid-template-columns:repeat(2,1fr)}.certificate-item{padding:18px}.career-item h3,.certificate-item h3{font-size:20px}}
+@media print{
+  .profile-position{display:none}.profile-name{font-size:30px}.profile-details>div{margin:4px 0}.profile-note{margin-top:6px;padding-top:6px}
+  .contribution{padding-bottom:12px}.closing{padding-top:17px}footer{padding:8px 0}
+}
