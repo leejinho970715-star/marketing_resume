@@ -4,6 +4,10 @@
 
 배포 주소: https://leejinho970715-star.github.io/marketing_resume/
 
+별도 지원용 이력서: https://leejinho970715-star.github.io/marketing_resume/growth-pm/
+
+`growth-pm/index.html`은 그로스 마케터·고객사 관리 PM 지원용 페이지입니다. 웹에이전시 웹기획·PM 5개월, 고객 문의·요구사항 소통, WBS와 캘린더 일정 관리 경험을 중심으로 구성했습니다. 새 페이지의 스타일과 공유 이미지, PDF는 `growth-pm/` 폴더에서 관리합니다.
+
 ## 파일 구성
 
 - `index.html`: GitHub Pages 시작 페이지
