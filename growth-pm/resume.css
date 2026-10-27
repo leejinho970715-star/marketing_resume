@@ -45,9 +45,9 @@ dt{color:var(--muted)}
 dd{margin:0;font-weight:600;line-height:1.7}
 .profile-note{font-size:14px;line-height:1.7;color:var(--muted);border-top:1px solid #c8d2c1;padding-top:16px;margin:18px 0 0}
 .profile-tools{min-width:0}
-.ai-tool-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.ai-tool{display:inline-flex;align-items:center;gap:6px;max-width:100%;padding:4px 7px;border:1px solid #ccd7c5;border-radius:5px;background:#f8faf5;font-size:14px;font-weight:550;line-height:1.5;white-space:nowrap}
-.ai-tool img{display:block;width:20px;height:20px;object-fit:contain;flex-shrink:0}
+.tool-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:0}
+.tool-badge{display:inline-flex;align-items:center;gap:6px;max-width:100%;padding:4px 7px;border:1px solid #ccd7c5;border-radius:5px;background:#f8faf5;font-size:14px;font-weight:550;line-height:1.5;white-space:nowrap}
+.tool-badge img{display:block;width:20px;height:20px;object-fit:contain;flex-shrink:0}
 .section{padding:49px 0;border-top:1px solid var(--line)}
 .section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:23px}
 .section-heading h2{font-size:28px;line-height:1.5;letter-spacing:-.045em;margin:9px 0 0;font-weight:750}
@@ -143,7 +143,7 @@ footer{border-top:1px solid var(--line);padding:25px 0 30px}
   .pm-grid{gap:8px}.pm-card{padding:12px}.pm-card>.icon{display:none}.pm-card p{line-height:1.65;margin-bottom:10px}.small-tag{padding-top:9px}
   #contribution{break-before:page}
   .profile-details .tools-detail{grid-template-columns:1fr;gap:6px}
-  .ai-tool-list{gap:4px;margin-top:5px}.ai-tool{padding:1px 3px;gap:4px;line-height:1.4}.ai-tool img{width:16px;height:16px}
+  .tool-list{gap:4px;margin-top:0}.tool-badge{padding:1px 3px;gap:4px;line-height:1.4}.tool-badge img{width:16px;height:16px}
   .measurement-plan{margin-top:22px;padding-top:18px;break-inside:avoid}.measurement-plan>h3{font-size:20px;margin:7px 0 10px}.measurement-intro{font-size:16px;line-height:1.7;margin-bottom:16px}
   .measurement-grid{grid-template-columns:repeat(3,1fr);gap:12px}.measurement-grid article{padding:14px;break-inside:avoid}.measurement-grid h4{font-size:18px;margin-bottom:10px}.measurement-grid p{font-size:16px;line-height:1.7}.measurement-grid .metric-examples{font-size:14px;margin-top:12px;padding-top:10px}
 }
