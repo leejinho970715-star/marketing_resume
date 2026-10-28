@@ -99,6 +99,16 @@ h3{font-size:20px;line-height:1.5;letter-spacing:-.035em;font-weight:700}
 .measurement-grid p{font-size:16px;line-height:1.8;margin:0;color:var(--muted)}
 .measurement-grid .metric-examples{font-size:14px;line-height:1.8;margin-top:15px;padding-top:12px;border-top:1px solid var(--line)}
 .metric-examples strong{display:block;color:var(--accent);font-size:14px;font-weight:650;margin-bottom:4px}
+.journey-goal{margin:0 0 26px;padding:22px 25px;border-left:3px solid var(--accent);background:var(--tint);font-size:18px;line-height:1.9;color:var(--muted)}
+.workflow-subtitle{font-size:22px;line-height:1.5;margin:0 0 12px}
+.workflow-intro{margin:0 0 20px;font-size:16px;line-height:1.85;color:var(--muted);max-width:1000px}
+.workflow-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.workflow-list li{position:relative;display:grid;grid-template-columns:36px 175px 1fr;align-items:center;gap:19px;padding:17px 0;border-bottom:1px solid var(--line)}
+.workflow-number{display:grid;place-items:center;width:34px;height:34px;border:1px solid #c4d5c6;border-radius:50%;background:var(--tint);color:var(--accent);font-size:14px;font-weight:650;line-height:1}
+.workflow-list h4{margin:0;font-size:18px;font-weight:650;line-height:1.5;letter-spacing:-.025em}
+.workflow-list p{margin:0;font-size:16px;line-height:1.8;color:var(--muted)}
+.workflow-arrow{position:absolute;bottom:-14px;left:9px;z-index:1;background:var(--paper);color:var(--accent);font-size:16px;line-height:24px}
+@media(max-width:600px){.journey-goal{font-size:16px;padding:19px}.workflow-subtitle{font-size:20px}.workflow-list li{grid-template-columns:30px 1fr;gap:8px 13px;padding:18px 0;align-items:start}.workflow-number{width:30px;height:30px;grid-row:1/3}.workflow-list h4{padding-top:2px}.workflow-list p{grid-column:2}.workflow-arrow{left:7px}}
 @media(max-width:850px){.measurement-grid{grid-template-columns:1fr;gap:12px}}
 .closing{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:39px 0 7px}
 .closing p{margin:0;font-size:25px;line-height:1.6;letter-spacing:-.035em;color:var(--muted)}
@@ -162,4 +172,6 @@ footer{border-top:1px solid var(--line);padding:25px 0 30px}
 @media print{
   .profile-position{display:none}.profile-name{font-size:30px}.profile-details>div{margin:4px 0}.profile-note{margin-top:6px;padding-top:6px}
   .contribution{padding-bottom:12px}.closing{padding-top:17px}footer{padding:8px 0}
+  #growth-workflow{break-before:page}.journey-goal{font-size:16px;line-height:1.8;padding:18px 20px;margin-bottom:20px;break-inside:avoid}.workflow-subtitle{font-size:20px;margin-bottom:10px}.workflow-intro{font-size:16px;line-height:1.75;margin-bottom:16px}
+  .workflow-list li{grid-template-columns:32px 150px 1fr;gap:14px;padding:13px 0;break-inside:avoid}.workflow-number{width:30px;height:30px;font-size:14px}.workflow-list h4{font-size:18px}.workflow-list p{font-size:16px;line-height:1.75}.workflow-arrow{left:7px}
 }
