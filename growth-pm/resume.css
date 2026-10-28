@@ -85,6 +85,7 @@ h3{font-size:20px;line-height:1.5;letter-spacing:-.035em;font-weight:700}
 .status.learning{color:#72552e;background:#eee9dc}
 .fit-row h4{font-size:14px;font-weight:650;margin:0 0 8px;color:var(--accent)}
 .fit-row p{font-size:16px;line-height:1.85;margin:0;color:var(--muted)}
+.fit-row code{font-family:inherit;font-size:14px;overflow-wrap:anywhere;word-break:break-word}
 .contribution-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:26px 0}
 .step{font-size:14px;font-weight:650;color:var(--accent)}
 .contribution-grid h3{margin:8px 0 12px;font-size:20px}
@@ -173,5 +174,6 @@ footer{border-top:1px solid var(--line);padding:25px 0 30px}
   .profile-position{display:none}.profile-name{font-size:30px}.profile-details>div{margin:4px 0}.profile-note{margin-top:6px;padding-top:6px}
   .contribution{padding-bottom:12px}.closing{padding-top:17px}footer{padding:8px 0}
   #growth-workflow{break-before:page}.journey-goal{font-size:16px;line-height:1.8;padding:18px 20px;margin-bottom:20px;break-inside:avoid}.workflow-subtitle{font-size:20px;margin-bottom:10px}.workflow-intro{font-size:16px;line-height:1.75;margin-bottom:16px}
+  .fit-row{padding:18px 0}
   .workflow-list li{grid-template-columns:32px 150px 1fr;gap:14px;padding:13px 0;break-inside:avoid}.workflow-number{width:30px;height:30px;font-size:14px}.workflow-list h4{font-size:18px}.workflow-list p{font-size:16px;line-height:1.75}.workflow-arrow{left:7px}
 }
