@@ -20,3 +20,10 @@
 
 - `airbnb-participation.png`: [기존 팀 캠페인 제안 PDF](https://eight-tau-19.vercel.app/assets/pdfs/lee-eungyu-airbnb-marketing.pdf) 8쪽을 고해상도로 렌더링한 이미지. 지역별 스토리 필터와 위치 맞히기·투표 콘텐츠 목업입니다. 이미지 속 반응 수와 투표 비율은 디자인 예시이며 실측 성과가 아닙니다.
 - 캠페인의 대상·의도는 사용자의 최신 설명을 반영했습니다. ‘지금 어디에어’라는 콘셉트로 국토대장정 내·외국인 여행자의 위치 인증·공유를 주변 에어비앤비 숙소·체험 탐색과 이용 동기로 연결하는 기획입니다.
+
+## 메타태그·키워드 근거 추가
+
+- 2026.11.03 공개 리뉴얼 제품 페이지의 HTML을 읽어 title, description, keywords, og:type을 발췌했습니다. description은 앞부분만 표시했습니다. 개발자도구 캡처가 아닌 실제 소스 코드 발췌입니다. 컴퓨터 사용 도구가 현재 브라우저 URL을 확인하지 못해 개발자도구 캡처를 중단했습니다.
+- 화면의 ‘#보안관리’와 제품 설명 영역은 기존 `ione-content-keywords.png` 캡처를 SVG viewBox로 확대 표시합니다. 원본 이미지 내용은 변경하지 않았습니다.
+- BEFORE / AFTER는 같은 메인포털 설명을 비교합니다. 추가 기능의 과거 대응 화면을 확보한 것처럼 표현하지 않았습니다.
+- [Google 공식 문서](https://developers.google.com/search/docs/crawling-indexing/special-tags)에 따라 meta keywords를 색인·순위 요소로 설명하지 않았습니다. 화면의 키워드·해시태그는 관련 기능을 이해하기 위한 정보 표시로 설명합니다.
