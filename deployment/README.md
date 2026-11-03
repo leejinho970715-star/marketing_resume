@@ -11,7 +11,7 @@ vercel --cwd .preview/vercel-growth-portfolio --project eungyu-growth-portfolio 
 
 배포 대상 프로젝트를 `--project`로 명시합니다. 로그인 정보는 Git에 포함하지 않습니다. 다른 프로젝트로 배포할 때 Vercel이 다른 도메인을 배정했다면 해당 도메인으로 준비 명령을 다시 실행한 뒤 배포합니다.
 
-준비 스크립트는 포트폴리오 HTML·CSS·JS, 공개 이미지·PDF, 공유 폰트·아이콘만 복사합니다. 로컬 `output/` 분석 자료는 포함하지 않습니다. 내부 자산 경로와 canonical·OG·구조화 데이터 주소를 Vercel 주소로 조정합니다. 기존 두 이력서 링크는 GitHub Pages로 연결합니다.
+준비 스크립트는 포트폴리오 HTML·CSS·JS, 공개 이미지·PDF, 공유 폰트·아이콘만 복사합니다. 로컬 `output/` 분석 자료는 포함하지 않습니다. 내부 자산 경로와 canonical·OG·구조화 데이터 주소를 Vercel 주소로 조정합니다.
 
 ## 한글 컴퓨터 이름이 있는 Windows
 

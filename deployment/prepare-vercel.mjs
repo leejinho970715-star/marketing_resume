@@ -36,9 +36,7 @@ let html = await readFile(path.join(repo, 'growth-portfolio', 'index.html'), 'ut
 html = html.replaceAll(oldPortfolio, site)
   .replaceAll('../growth-pm/assets/clay/', 'shared/clay/')
   .replaceAll('../growth-pm/assets/tools/', 'shared/tools/')
-  .replaceAll('../assets/fonts/', 'shared/fonts/')
-  .replace('href="../"', `href="${github}"`)
-  .replace('href="../growth-pm/"', `href="${github}growth-pm/"`);
+  .replaceAll('../assets/fonts/', 'shared/fonts/');
 await writeFile(path.join(output, 'index.html'), html);
 let css = await readFile(path.join(repo, 'growth-portfolio', 'styles.css'), 'utf8');
 css = css.replaceAll('../assets/fonts/', 'shared/fonts/');
