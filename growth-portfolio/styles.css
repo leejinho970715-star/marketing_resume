@@ -45,6 +45,9 @@
 @media print{#ads-operations{break-before:page}.ad-platforms{grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;break-inside:avoid}.ad-platform{padding:20px}.ad-platform-heading{flex-wrap:wrap;gap:10px}.ad-platform-heading h3{font-size:19px}.ad-platform p{font-size:14px;line-height:1.75}.ad-label{font-size:14px}}
 
 .career-details p{margin:0 0 8px}.career-duties{padding-left:20px;margin:0;font-size:16px;color:var(--muted);line-height:1.85}.career-duties li{margin:3px 0}
+.hero-labels{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 22px}.hero-labels li{padding:7px 15px;border:1px solid #c3d1c0;border-radius:999px;background:#eef4e9;color:var(--green);font-size:16px;font-weight:600;line-height:1.6;white-space:nowrap}
+@media(max-width:600px){.hero-labels{gap:8px;margin-bottom:20px}.hero-labels li{padding:6px 12px;font-size:14px}}
+@media print{.hero-labels{gap:7px;margin-bottom:14px;break-inside:avoid}.hero-labels li{font-size:14px;padding:5px 11px}}
 .print-number{display:none}#next h2{position:relative}.typing-visual{width:100%}
 @media print{.screen-number{display:none}.print-number{display:inline}}
 

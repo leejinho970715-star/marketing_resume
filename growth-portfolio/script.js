@@ -92,7 +92,7 @@ new ResizeObserver(entries => {
           ...options,
         });
       };
-      reveal('.hero .eyebrow, .hero h1, .hero-copy, .hero-actions, .hero-note', '.hero');
+      reveal('.hero .eyebrow, .hero h1, .hero-labels, .hero-copy, .hero-actions, .hero-note', '.hero');
       reveal('.growth-card', '.hero', { y: 24, scale: 0.96, duration: 0.85, ease: 'back.out(1.25)' });
       root.querySelectorAll('.section-heading, .seo-evidence>h3, .airbnb-detail>.section-heading, .closing>div').forEach(item => reveal(item, item));
       root.querySelectorAll('.storyline, .insight-grid, .renewal-changes, .comparison-grid, .renewal-gallery, .research-findings, .db-flow, .db-use-cases, .ad-platforms, .campaign-flow, .two-cases').forEach(group => reveal([...group.children], group));
