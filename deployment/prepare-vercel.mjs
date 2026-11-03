@@ -12,7 +12,7 @@ if (origin.protocol !== 'https:' || origin.pathname !== '/') {
 const site = origin.origin + '/';
 const github = 'https://leejinho970715-star.github.io/marketing_resume/';
 const oldPortfolio = github + 'growth-portfolio/';
-const allowed = new Set(['.png', '.webp', '.svg', '.pdf', '.woff2', '.js', '.txt']);
+const allowed = new Set(['.png', '.webp', '.svg', '.pdf', '.woff2', '.js', '.css', '.txt']);
 let files = 0;
 async function copyAssets(from, to) {
   await mkdir(to, { recursive: true });
