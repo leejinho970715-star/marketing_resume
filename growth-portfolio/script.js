@@ -32,6 +32,7 @@ document.querySelectorAll('[data-filter]').forEach(button => {
       if (!item.hidden) count++;
     });
     document.querySelector('.archive-count').textContent = `${button.textContent} ${count}개 항목`;
+    window.ScrollTrigger?.refresh();
   });
 });
 document.querySelector('.print-button').addEventListener('click', () => window.print());
@@ -46,3 +47,131 @@ new ResizeObserver(entries => {
     label.style.fontSize = `${pixels * 460 / width}px`;
   });
 }).observe(chart);
+
+// Content is visible by default. Motion is progressive enhancement only.
+(() => {
+  if (!window.gsap || !window.ScrollTrigger) return;
+  const { gsap, ScrollTrigger } = window;
+  gsap.registerPlugin(ScrollTrigger);
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const printMedia = window.matchMedia('print');
+  const toggle = document.querySelector('.motion-toggle');
+  const root = document.querySelector('main');
+  let enabled = !reducedMotion.matches;
+  let media;
+  let typingCleanup = () => {};
+  let printing = printMedia.matches;
+  const progress = document.createElement('div');
+  progress.className = 'reading-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  document.body.append(progress);
+
+  function stopMotion() {
+    media?.revert();
+    media = undefined;
+    typingCleanup();
+    typingCleanup = () => {};
+    progress.hidden = true;
+  }
+
+  function startMotion() {
+    stopMotion();
+    if (!enabled || printing) return;
+    progress.hidden = false;
+    media = gsap.matchMedia();
+    media.add({ small: '(max-width: 600px)', wide: '(min-width: 601px)' }, context => {
+      const distance = context.conditions.small ? 18 : 32;
+      const reveal = (targets, trigger, options = {}) => {
+        const items = gsap.utils.toArray(targets);
+        if (!items.length) return;
+        items.forEach(item => item.classList.add('motion-target'));
+        gsap.from(items, {
+          y: distance, opacity: 0, duration: 0.65, ease: 'power2.out',
+          stagger: 0.07,
+          scrollTrigger: { trigger, start: 'top 91%', once: true },
+          ...options,
+        });
+      };
+      reveal('.hero .eyebrow, .hero h1, .hero-copy, .hero-actions, .hero-note', '.hero');
+      reveal('.growth-card', '.hero', { y: 24, scale: 0.96, duration: 0.85, ease: 'back.out(1.25)' });
+      root.querySelectorAll('.section-heading, .seo-evidence>h3, .airbnb-detail>.section-heading, .closing>div').forEach(item => reveal(item, item));
+      root.querySelectorAll('.storyline, .insight-grid, .renewal-changes, .comparison-grid, .renewal-gallery, .research-findings, .db-flow, .db-use-cases, .ad-platforms, .campaign-flow, .two-cases').forEach(group => reveal([...group.children], group));
+      root.querySelectorAll('.section-clay, .closing-clay').forEach((asset, index) => {
+        asset.classList.add('motion-target');
+        gsap.from(asset, {
+          y: 28, scale: 0.78, rotation: index % 2 ? 6 : -6, opacity: 0,
+          duration: 0.95, ease: 'back.out(1.8)',
+          scrollTrigger: { trigger: asset.parentElement, start: 'top 90%', once: true },
+        });
+      });
+      gsap.fromTo(progress, { scaleX: 0 }, {
+        scaleX: 1, ease: 'none',
+        scrollTrigger: { start: 0, end: 'max', scrub: 0.15 },
+      });
+
+      // Keep the complete sentence in the document and accessibility tree.
+      // An aria-hidden overlay types without shifting the surrounding layout.
+      const typingRestorers = [];
+      root.querySelectorAll('.hero-positioning, #next h2').forEach(slogan => {
+        const text = slogan.innerText;
+        const originalNodes = [...slogan.childNodes].map(node => node.cloneNode(true));
+        const source = document.createElement('span');
+        source.className = 'typing-source';
+        source.append(...slogan.childNodes);
+        const visual = document.createElement('span');
+        visual.className = 'typing-visual is-typing';
+        visual.setAttribute('aria-hidden', 'true');
+        slogan.replaceChildren(source, visual);
+        gsap.set(source, { opacity: 0 });
+        const letters = Array.from(text);
+        const state = { count: 0 };
+        gsap.to(state, {
+          count: letters.length, snap: { count: 1 }, duration: 1.1, delay: 0.25, ease: 'none',
+          scrollTrigger: { trigger: slogan, start: 'top 94%', once: true },
+          onUpdate: () => { visual.textContent = letters.slice(0, state.count).join(''); },
+          onComplete: () => {
+            source.style.opacity = '';
+            visual.hidden = true;
+          },
+        });
+        typingRestorers.push(() => slogan.replaceChildren(...originalNodes));
+      });
+      typingCleanup = () => typingRestorers.forEach(restore => restore());
+      return () => {
+        typingCleanup();
+        typingCleanup = () => {};
+      };
+    });
+    ScrollTrigger.refresh();
+  }
+
+  function updateToggle() {
+    toggle.setAttribute('aria-pressed', String(enabled));
+    toggle.textContent = enabled ? '모션 켜짐' : '모션 꺼짐';
+  }
+  toggle.hidden = false;
+  updateToggle();
+  toggle.addEventListener('click', () => {
+    enabled = !enabled;
+    updateToggle();
+    startMotion();
+  });
+  reducedMotion.addEventListener('change', () => {
+    enabled = !reducedMotion.matches;
+    updateToggle();
+    startMotion();
+  });
+  document.querySelector('.archive-disclosure')?.addEventListener('toggle', () => ScrollTrigger.refresh());
+  window.addEventListener('beforeprint', () => { printing = true; stopMotion(); });
+  window.addEventListener('afterprint', () => { printing = false; startMotion(); });
+  document.fonts.ready.then(() => ScrollTrigger.refresh());
+  window.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
+  try {
+    startMotion();
+  } catch (error) {
+    stopMotion();
+    enabled = false;
+    updateToggle();
+    console.warn('Portfolio motion is disabled; all content remains available.', error);
+  }
+})();

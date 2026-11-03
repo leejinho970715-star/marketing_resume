@@ -12,7 +12,7 @@ if (origin.protocol !== 'https:' || origin.pathname !== '/') {
 const site = origin.origin + '/';
 const github = 'https://leejinho970715-star.github.io/marketing_resume/';
 const oldPortfolio = github + 'growth-portfolio/';
-const allowed = new Set(['.png', '.webp', '.svg', '.pdf', '.woff2']);
+const allowed = new Set(['.png', '.webp', '.svg', '.pdf', '.woff2', '.js', '.txt']);
 let files = 0;
 async function copyAssets(from, to) {
   await mkdir(to, { recursive: true });
@@ -31,7 +31,6 @@ await copyAssets(path.join(repo, 'growth-portfolio', 'assets'), path.join(output
 await copyAssets(path.join(repo, 'growth-pm', 'assets', 'clay'), path.join(output, 'shared', 'clay'));
 await copyAssets(path.join(repo, 'growth-pm', 'assets', 'tools'), path.join(output, 'shared', 'tools'));
 await copyAssets(path.join(repo, 'assets', 'fonts'), path.join(output, 'shared', 'fonts'));
-await copyFile(path.join(repo, 'assets', 'fonts', 'OFL-LICENSE.txt'), path.join(output, 'shared', 'fonts', 'OFL-LICENSE.txt'));
 
 let html = await readFile(path.join(repo, 'growth-portfolio', 'index.html'), 'utf8');
 html = html.replaceAll(oldPortfolio, site)
