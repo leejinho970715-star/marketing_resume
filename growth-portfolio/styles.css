@@ -77,3 +77,9 @@
 @media(max-width:380px){.renewal-goals strong{font-size:20px}}
 @media print{.renewal-goals strong{font-size:21px}}
 @media print{.renewal-overview .section-heading{display:grid;grid-template-columns:1fr 1.15fr;gap:22px;align-items:end}.renewal-overview .section-description{margin:0;font-size:14px;line-height:1.7}.renewal-overview .case-summary{font-size:14px;line-height:1.65;margin-top:18px;padding:15px 18px}}
+
+/* Shared experience, presented through each role’s perspective. */
+.portfolio-perspective{font-size:14px;line-height:1.85;font-weight:400;color:var(--muted);overflow-wrap:break-word}
+.hero-perspective{max-width:590px;margin:18px 0 0}
+.footer-perspective{max-width:920px;margin:18px 0 0}
+@media screen and (max-width:600px){.hero-perspective{margin-top:20px}.footer-perspective{margin-top:22px;line-height:1.95}}
